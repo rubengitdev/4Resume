@@ -1,8 +1,8 @@
-import '../styles/Resume.css';
-import PersonalInfoSection from './personal-info/PersonalInfoSection';
-import EducationInfoSection from './education/EducationInfoSection';
+import './Resume.css';
+import PersonalInfoSection from '../PersonalInfo/PersonalInfoSection/PersonalInfoSection.js';
+import EducationInfoSection from '../Education/EducationInfoSection/EducationInfoSection.js';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import ExperienceInfoSection from './experience/ExperienceInfoSection';
+import ExperienceInfoSection from '../Experience/ExperienceInfoSection.js';
 
 function Resume({ personalInfo, sections, layout }) {
     return (

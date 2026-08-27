@@ -1,4 +1,4 @@
-import '../styles/InputGroup.css';
+import './InputGroup.css';
 function InputGroup({
     id,
     placeholder,

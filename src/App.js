@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import './styles/App.css';
-import PersonalDetails from './components/personal-info/PersonalDetails';
-import AddEducationSection from './components/education/AddEducationSection';
-import AddExperienceSection from './components/experience/AddExperienceSection';
-import Resume from './components/Resume';
+import './App.css';
+import PersonalDetails from './components/PersonalInfo/PersonalDetails/PersonalDetails.js';
+import AddEducationSection from './components/Education/AddEducationSection/AddEducationSection.js';
+import AddExperienceSection from './components/Experience/AddExperienceSection.js';
+import Resume from './components/Resume/Resume.js';
 import uniqid from 'uniqid';
-import TemplateLoader from './components/TemplateLoader';
-import exampleData from './example-data';
-import Sidebar from './components/Sidebar';
-import Customize from './components/Customize';
+import TemplateLoader from './components/Resume/template-loader/TemplateLoader.js';
+import exampleData from './data/example-data.js';
+import Sidebar from './components/Layout/Sidebar/Sidebar.js';
+import Customize from './components/Customize/Customize.js';
 
 function App() {
     const [personalInfo, setPersonalInfo] = useState(exampleData.personalInfo);

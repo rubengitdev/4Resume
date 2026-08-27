@@ -1,4 +1,4 @@
-import EducationInfo from './EducationInfo';
+import EducationInfo from '../EducationInfo/EducationInfo.js';
 import DisplaySection from '../../DisplaySection';
 
 function EducationInfoSection({ educations }) {

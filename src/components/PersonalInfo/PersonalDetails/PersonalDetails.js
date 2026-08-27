@@ -1,5 +1,5 @@
-import InputGroup from '../InputGroup';
-import '../../styles/PersonalDetails.css';
+import InputGroup from '../../Common/InputGroup/InputGroup.js';
+import './PersonalDetails.css';
 
 function PersonalDetails({
     onChange,

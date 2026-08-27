@@ -1,7 +1,7 @@
-import DisplayForms from '../../DisplayForms';
-import ExpandSection from '../ExpandSection';
-import CreateForm from '../../CreateForm';
-import '../../styles/Section.css';
+import DisplayForms from '../../Layout/DisplayForms/DisplayForms.js';
+import ExpandSection from '../../Common/ExpandSection/ExpandSection.js';
+import CreateForm from '../../Forms/CreateForm/CreateForm.js';
+import '../../Section.css';
 import EducationForm from '../EducationForm/EducationForm';
 
 function AddEducationSection({

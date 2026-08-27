@@ -1,4 +1,4 @@
-import '../../styles/PersonalInfoSection.css';
+import './PersonalInfoSection.css';
 
 function PersonalInfoSection({
     email,

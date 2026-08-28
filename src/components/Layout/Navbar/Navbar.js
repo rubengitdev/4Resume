@@ -24,7 +24,7 @@ export default function Navbar({ onGoToPage, page }) {
             {/* Download Button */}
             <button>
                 <i className="fa-solid fa-download" />
-                Download
+                Download PDF
             </button>
         </nav>
     );

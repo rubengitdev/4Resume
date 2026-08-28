@@ -16,7 +16,7 @@ function PersonalDetails({
                 type="text"
                 id="full-name"
                 labelText="Full name"
-                placeholder="First and last name"
+                placeholder="e.g. John Doe"
                 value={fullName}
                 onChange={onChange}
                 data-key="fullName"
@@ -25,16 +25,17 @@ function PersonalDetails({
                 type="text"
                 id="position"
                 labelText="Position"
-                placeholder="Desired Position"
+                placeholder="e.g. Software Developer"
                 value={position}
                 onChange={onChange}
                 data-key="position"
+                recommended
             />
             <InputGroup
                 type="email"
                 id="email"
                 labelText="Email"
-                placeholder="Enter email"
+                placeholder="e.g. john.doe@example.com"
                 value={email}
                 onChange={onChange}
                 data-key="email"
@@ -44,7 +45,7 @@ function PersonalDetails({
                 type="tel"
                 id="phone-number"
                 labelText="Phone number"
-                placeholder="Enter phone number"
+                placeholder="e.g. +1 234 567 8910"
                 value={phoneNumber}
                 onChange={onChange}
                 data-key="phoneNumber"
@@ -54,7 +55,7 @@ function PersonalDetails({
                 type="text"
                 id="address"
                 labelText="Address"
-                placeholder="City, Country"
+                placeholder="e.g. Jakarta, IDN"
                 value={address}
                 onChange={onChange}
                 data-key="address"

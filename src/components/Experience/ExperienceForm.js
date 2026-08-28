@@ -25,7 +25,7 @@ function ExperienceForm(props) {
                 type="text"
                 id="company-name"
                 labelText="Company Name"
-                placeholder="Enter Company Name"
+                placeholder="e.g. Microsoft INC"
                 value={companyName}
                 onChange={onChange}
                 data-key="companyName"
@@ -34,7 +34,7 @@ function ExperienceForm(props) {
                 type="text"
                 id="position-title"
                 labelText="Position Title"
-                placeholder="Enter Position Title"
+                placeholder="e.g. Junior Software Developer"
                 value={positionTitle}
                 onChange={onChange}
                 data-key="positionTitle"
@@ -44,7 +44,7 @@ function ExperienceForm(props) {
                     type="text"
                     id="date"
                     labelText="Start Date"
-                    placeholder="Enter Start Date"
+                    placeholder="e.g. January 2020"
                     value={startDate}
                     onChange={onChange}
                     data-key="startDate"
@@ -53,7 +53,7 @@ function ExperienceForm(props) {
                     type="text"
                     id="date"
                     labelText="End Date"
-                    placeholder="Enter End Date"
+                    placeholder="e.g. August 2021"
                     value={endDate}
                     onChange={onChange}
                     data-key="endDate"
@@ -63,21 +63,19 @@ function ExperienceForm(props) {
                 type="text"
                 id="location"
                 labelText="Location"
-                placeholder="Enter Location"
+                placeholder="e.g. New York, NY"
                 value={location}
                 onChange={onChange}
                 data-key="location"
-                optional
             />
             <InputGroup
                 type="textarea"
                 id="description"
                 labelText="Description"
-                placeholder="Enter Description"
+                placeholder="e.g. Collaborated with a team of 5 engineers to build software ..."
                 value={description}
                 onChange={onChange}
                 data-key="description"
-                optional
             />
             <Buttons save={save} cancel={cancel} remove={remove} />
         </form>

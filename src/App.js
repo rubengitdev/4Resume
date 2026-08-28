@@ -7,8 +7,8 @@ import Resume from './components/Resume/Resume.js';
 import uniqid from 'uniqid';
 import TemplateLoader from './components/Resume/template-loader/TemplateLoader.js';
 import exampleData from './data/example-data.js';
-import Sidebar from './components/Layout/Sidebar/Sidebar.js';
 import Customize from './components/Customize/Customize.js';
+import Navbar from './components/Layout/Navbar/Navbar';
 
 function App() {
     const [personalInfo, setPersonalInfo] = useState(exampleData.personalInfo);
@@ -134,73 +134,78 @@ function App() {
 
     return (
         <div className="app">
-            <div className="edit-side">
-                <Sidebar onGoToPage={setCurrentPage} page={currentPage} />
-                <div className="form-container">
-                    <TemplateLoader
-                        onTemplateLoad={() => {
-                            setPersonalInfo(exampleData.personalInfo);
-                            setSections(exampleData.sections);
-                        }}
-                        onClear={() => {
-                            setPersonalInfo({
-                                fullName: '',
-                                position: '',
-                                email: '',
-                                phoneNumber: '',
-                                address: '',
-                            });
-                            setSections({ educations: [], experiences: [] });
-                            setPrevState(null);
-                        }}
-                    />
-                    {currentPage === 'content' && (
-                        <>
-                            <PersonalDetails
-                                onChange={handlePersonalInfoChange}
-                                fullName={personalInfo.fullName}
-                                position={personalInfo.position}
-                                email={personalInfo.email}
-                                phoneNumber={personalInfo.phoneNumber}
-                                address={personalInfo.address}
-                            />
-                            <AddEducationSection
-                                educations={sections.educations}
-                                isOpen={sectionOpen === 'Education'}
-                                onChange={handleSectionChange}
-                                createForm={createEducationForm}
-                                setOpen={setOpen}
-                                onCancel={cancelForm}
-                                toggleCollapsed={toggleCollapsed}
-                                onHide={toggleHidden}
-                                onRemove={removeForm}
-                            />
-                            <AddExperienceSection
-                                experiences={sections.experiences}
-                                isOpen={sectionOpen === 'Experience'}
-                                onChange={handleSectionChange}
-                                createForm={createExperienceForm}
-                                setOpen={setOpen}
-                                onCancel={cancelForm}
-                                toggleCollapsed={toggleCollapsed}
-                                onHide={toggleHidden}
-                                onRemove={removeForm}
-                            />
-                        </>
-                    )}
+            <Navbar onGoToPage={setCurrentPage} page={currentPage} />
+            <div class="main-content">
+                <div className="edit-side">
+                    <div className="form-container">
+                        <TemplateLoader
+                            onTemplateLoad={() => {
+                                setPersonalInfo(exampleData.personalInfo);
+                                setSections(exampleData.sections);
+                            }}
+                            onClear={() => {
+                                setPersonalInfo({
+                                    fullName: '',
+                                    position: '',
+                                    email: '',
+                                    phoneNumber: '',
+                                    address: '',
+                                });
+                                setSections({
+                                    educations: [],
+                                    experiences: [],
+                                });
+                                setPrevState(null);
+                            }}
+                        />
+                        {currentPage === 'content' && (
+                            <>
+                                <PersonalDetails
+                                    onChange={handlePersonalInfoChange}
+                                    fullName={personalInfo.fullName}
+                                    position={personalInfo.position}
+                                    email={personalInfo.email}
+                                    phoneNumber={personalInfo.phoneNumber}
+                                    address={personalInfo.address}
+                                />
+                                <AddEducationSection
+                                    educations={sections.educations}
+                                    isOpen={sectionOpen === 'Education'}
+                                    onChange={handleSectionChange}
+                                    createForm={createEducationForm}
+                                    setOpen={setOpen}
+                                    onCancel={cancelForm}
+                                    toggleCollapsed={toggleCollapsed}
+                                    onHide={toggleHidden}
+                                    onRemove={removeForm}
+                                />
+                                <AddExperienceSection
+                                    experiences={sections.experiences}
+                                    isOpen={sectionOpen === 'Experience'}
+                                    onChange={handleSectionChange}
+                                    createForm={createExperienceForm}
+                                    setOpen={setOpen}
+                                    onCancel={cancelForm}
+                                    toggleCollapsed={toggleCollapsed}
+                                    onHide={toggleHidden}
+                                    onRemove={removeForm}
+                                />
+                            </>
+                        )}
 
-                    <Customize
-                        isShown={currentPage === 'customize'}
-                        onColChange={setResumeLayout}
-                    />
+                        <Customize
+                            isShown={currentPage === 'customize'}
+                            onColChange={setResumeLayout}
+                        />
+                    </div>
                 </div>
-            </div>
 
-            <Resume
-                personalInfo={personalInfo}
-                sections={sections}
-                layout={resumeLayout}
-            />
+                <Resume
+                    personalInfo={personalInfo}
+                    sections={sections}
+                    layout={resumeLayout}
+                />
+            </div>
         </div>
     );
 }

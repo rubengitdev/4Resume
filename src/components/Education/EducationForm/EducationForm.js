@@ -16,7 +16,7 @@ function EducationForm(props) {
                 type="text"
                 id="school-name"
                 labelText="School"
-                placeholder="Enter school / university"
+                placeholder="e.g. Harvard University"
                 value={schoolName}
                 onChange={onChange}
                 data-key="schoolName"
@@ -25,7 +25,7 @@ function EducationForm(props) {
                 type="text"
                 id="degree"
                 labelText="Degree"
-                placeholder="Enter Degree / Field Of Study"
+                placeholder="e.g. Bachelor of Science in Computer Science"
                 value={degree}
                 onChange={onChange}
                 data-key="degree"
@@ -35,7 +35,7 @@ function EducationForm(props) {
                     type="text"
                     id="date"
                     labelText="Start Date"
-                    placeholder="Enter Start Date"
+                    placeholder="e.g. September 2020"
                     value={startDate}
                     onChange={onChange}
                     data-key="startDate"
@@ -44,7 +44,7 @@ function EducationForm(props) {
                     type="text"
                     id="date"
                     labelText="End Date"
-                    placeholder="Enter End Date"
+                    placeholder="e.g. June 2026"
                     value={endDate}
                     onChange={onChange}
                     data-key="endDate"
@@ -54,7 +54,7 @@ function EducationForm(props) {
                 type="text"
                 id="location"
                 labelText="Location"
-                placeholder="Enter Location"
+                placeholder="e.g. New York, NY"
                 value={location}
                 onChange={onChange}
                 data-key="location"

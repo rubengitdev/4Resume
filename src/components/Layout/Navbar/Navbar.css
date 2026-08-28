@@ -13,7 +13,6 @@
 
 .navbar button {
     border: 0;
-    background-color: transparent;
     padding: 10px 20px;
     border-radius: 12px;
     display: flex;
@@ -22,12 +21,14 @@
     flex-direction: row;
     align-items: center;
     font-family: 'NotoSans-SemiBold';
+    background-color: transparent;
     transition: background-color 0.15s ease-in-out;
+    color: black;
 }
 
 .navbar button[data-selected='true'] {
-    background-color: whitesmoke;
-    color: #0e374e;
+    background: var(--button-background-color);
+    color: whitesmoke;
 }
 
 .navbar button:active {

@@ -5,6 +5,12 @@
     padding: 36px 24px;
 }
 
+.preview-placeholder {
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
 .resume-name {
     text-align: center;
 }

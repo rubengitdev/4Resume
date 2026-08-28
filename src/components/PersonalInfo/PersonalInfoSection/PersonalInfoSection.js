@@ -7,6 +7,17 @@ function PersonalInfoSection({
     phoneNumber,
     address,
 }) {
+    const isEmpty =
+        !fullName && !position && !email && !phoneNumber && !address;
+
+    if (isEmpty) {
+        return (
+            <div className="personal-info">
+                <p class="preview-placeholder">Preview Resume</p>
+            </div>
+        );
+    }
+
     return (
         <div className="personal-info">
             <h1 className="resume-name">{fullName}</h1>

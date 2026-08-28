@@ -5,7 +5,7 @@ export default function TemplateLoader({ onTemplateLoad, onClear }) {
         <div className="template-loader">
             <button onClick={onClear} className="clear-resume">
                 <i className="fa-solid fa-trash" />
-                Clear Resume
+                Clear Input
             </button>{' '}
             <button onClick={onTemplateLoad} className="load-example">
                 Load Example
